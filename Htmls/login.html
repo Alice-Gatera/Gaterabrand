@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../Css/login.css">
+    <title> Login page</title>
+</head>
+<body>
+    <div class="menu-btn">
+        <i class="fas fa-bars fa-2x"></i>
+    </div>
+      <div class="container">
+          <!--Nav-->
+          <nav class="main-nav">
+     <img src="../images/logoA.jpg" alt="Microsoft" class="logo">
+         
+          <ul class="main-menu show">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">Skills</a></li>
+              <li><a href="#">Project</a></li>
+              <li><a href="#">Experience</a></li>
+              <li><a href="blog.html">Blogs</a></li>
+              <li><a href="contact.html"> Contact Me</a></li>
+              <li><a href="login.html">Login</a></li>
+          </ul>
+          <ul class="right-menu">
+              <li>
+                  <a href="#">
+                    <i class="fas fa-search" >
+    
+                    </i>
+                    
+              </li>
+          </ul>
+        </nav>
+    <!--Login-->
+    <section class="login">
+    <div class="sign-up-form">
+        <img src="../images/user-icon.png">
+        <h1>Sign In now</h1>
+        <form>
+            <input type="email" class="input-box" placeholder="Your Email">
+            <input type="password" class="input-box" placeholder="Your Password">
+            <button type="button"  onclick="alert('you logged in')" class="signup-btn">Sign in</button>
+        </form>
+    </div>
+</section>
+  <!--Footer-->
+  <footer class="footer">
+    <div class="footer-inner">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Skills</a></li>
+<li><a href="#">Project</a></li>
+<li><a href="#">Experience</a></li>
+<li><a href="#">Blogs</a></li>
+<li><a href="#">Contact Me</a></li>
+<li><a href="#">Login</a></li>
+<li><a href="#">&copy;Alice GATERA 2020</a></li>
+</ul>
+    </div>
+</footer>
+<script>
+    document.querySelector('.menu-btn').addEventListener('click'),
+() => document.querySelector('.main-menu').classList.toggle('show');
+</script>
+</body>
+</html>
