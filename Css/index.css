@@ -20,7 +20,8 @@ a{
 ul{
 list-style: none;
 }  
-./*.container */ {
+
+.container{
     width: 90%;
    max-width: 1100px;
     margin: auto;
@@ -97,11 +98,10 @@ margin-bottom: 30px;
 
 }
 .showcase img{
-    border: 2px solid #ddd;
-    height: 300px;
+   
     width: 300px;
-    border-radius: 4px;
-    padding: 5px;
+    border-radius: 50%;
+
 
 }
 .showcase .btn{
@@ -449,7 +449,7 @@ img{
     margin-right: 10px;
     margin-top: 20px;
 }
-.
+
 /* Links*/
 .links{
     background: #f2f2f2;
