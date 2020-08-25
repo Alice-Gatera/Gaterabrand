@@ -80,8 +80,6 @@ list-style: none;
 /* Showcae*/
 .showcase{
 width: 100%;
-height: 400px;
-
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -91,10 +89,9 @@ padding-bottom: 50px;
 margin-bottom: 30px;
 }
 .showcase h2,.showcase p{
+
     margin-bottom: 10px;
     color: #000;
-    display: flex;
-    flex-direction: column;
 
 }
 .showcase img{
@@ -434,7 +431,7 @@ hr{
 }
 img{
     width: 70px;
-    margin-top: -50px;
+ 
 }
 
 /* Folow */
