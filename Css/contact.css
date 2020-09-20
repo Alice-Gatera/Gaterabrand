@@ -8,8 +8,7 @@
 }
 body{
     min-height: 100vh;
-    background:url("../images/login.jpg") no-repeat ;
-    background-size: cover;
+    background: #ffffff ;
     display: flex;
     justify-content: center;
     color: #000;
@@ -23,7 +22,7 @@ a{
 ul{
 list-style: none;
 }  
-./*.container */ {
+.container  {
     width: 90%;
    max-width: 1100px;
     margin: auto;
@@ -94,7 +93,7 @@ list-style: none;
     }
     .showcase h2,.showcase p{
         margin-bottom: 10px;
-        color: #f1f1f1;
+        color: #161616;
     
     }
     .showcase .btn{
@@ -110,8 +109,6 @@ list-style: none;
 .contact-section{
     width: 100%;
  min-height: 100vh;
- background: url(images/back.jpg) no-repeat;
- background-size: cover;
  display: flex;
  justify-items: center;
  align-items: center;
@@ -135,7 +132,7 @@ margin-right: 50px;
     flex: 1;
 }
 .contact-form h2{
-    color: #f1f1f1;
+    color: #222020;
     text-align: center;
     font-size: 35px;
     text-transform: uppercase;

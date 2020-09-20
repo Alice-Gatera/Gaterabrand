@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <link rel="stylesheet" href="../Css/contact.css">
-    <title> Microsoft official homepage</title>
+    <title> Contact page</title>
 </head>
 <body>
 <div class="menu-btn">
@@ -53,7 +53,7 @@
             </div>
             <div class="contact-form">
                 <h2>Contact Me</h2>
-                <form class="contact" action="" method="post">
+                <form class="contact">
                     <input type="text" name="name" class="text-box" placeholder="Your Name" required>
                     <input type="email" name="email" class="text-box" placeholder="Your Email" required>
                     <textarea name="message"  rows="5" placeholder="Your Message" required></textarea>
@@ -92,10 +92,10 @@
     </footer>
 </div>
 </div>
-    
-    <script>
-        document.querySelector('.menu-btn').addEventListener('click'),
-    () => document.querySelector('.main-menu').classList.toggle('show');
-    </script>
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-analytics.js"></script>
+<script src= "../Scripts/contact.js"></script>
+
   </body>
   </html>

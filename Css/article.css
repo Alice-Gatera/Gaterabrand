@@ -4,16 +4,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body{
-    min-height: 100vh;
-    background:url("../images/login.jpg") no-repeat ;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff;
     color: #000;
-    
+    font-size: 15px;
+    line-height: 1.5;
 
 }
 a{
@@ -23,7 +20,8 @@ a{
 ul{
 list-style: none;
 }  
-./*.container */ {
+
+.container{
     width: 90%;
    max-width: 1100px;
     margin: auto;
@@ -37,7 +35,7 @@ list-style: none;
     padding:20px 0;
     font-size: 13px;
 }
-.main-nav .logo{
+.main-nav.logo{
     width: 60px;
     height: 100%;
 }
@@ -72,62 +70,63 @@ list-style: none;
     border: 0;
     font-weight: bold;
     padding: 10px 20px;
-    background: #262626;
-    color: #fff;
+    background: #1f1111;
+    color: #000;
     font-size: 15px;
 }
 .btn:hover{
     opacity: 0.9;
 }
-#page{
-    background: rgb(151, 137, 144);
+.add-comment{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 18px;
+
+}
+textarea{
+    margin-top: 20px;
+    padding: 18px;
+}
+
+button{
+    background: #000000;
+}
+.article h3{
+
+    margin-bottom: 20px;
     color: #000;
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+    justify-content: flex-start;
+    margin-top: 20px;
+  
 }
-#main-contentt
-{
-color: #000;
-padding: 5px;
-margin: auto;
+.article p{
+  margin-top: 30px;
+    justify-content: flex-start;
+    line-height: 1.5em;
+    font-size: 25px;
+    padding: 18px;
+    margin-bottom: 30px;
 }
-.panel-pane pane-node-created{
-    color: black;
-    font-size: 20px;
-    margin-top: 4px;
-    margin-bottom: 6px;
-justify-content: flex-start;
-}
-.field-item even img{
-    height: 30px;
-    width: 40px;
-}
-.field-item even p{
-    margin-top: 15px;
-    margin-bottom: 10px;
-    justify-content: space-between;
-}
-
-.breadcrumb{
+.read-article img{
+   
+    width: 700px;
+    height: 300px;
 
 
 }
 
-.panel-pane pane-node-comment-form{
+.comment-section{
     width: 100%;
  min-height: 100vh;
+ background: #fff;
  background-size: cover;
  display: flex;
  justify-items: center;
  align-items: center;
 }
-.pane-title{
-    color: #000;
-    text-align: center;
-}
 .contact-info{
-    color: #fff;
+    color: #000000;
     max-width: 500px;
     line-height: 65px;
     padding-left: 50px;
@@ -137,39 +136,39 @@ justify-content: flex-start;
     margin-right: 20px;
     font-size: 25px;
 }
-.contact-form{
+.comment-form{
 max-width: 700px;
 margin-right: 50px;
 }
-.contact-info .contact-form{
+.contact-info .comment-form{
     flex: 1;
 }
-.contact-form h2{
-    color: #f1f1f1;
+.comment-form h2{
+    color: #000;
     text-align: center;
     font-size: 35px;
     text-transform: uppercase;
     margin-bottom: 30px;
 }
-.contact-form .text-box{
-    background: #000;
-    color: #fff;
+.comment-form .text-box{
+    background: rgb(248, 246, 246);
+    color: #000;
     border: none;
     width: calc(50%-10px);
     height: 50px;
     padding: 12px;
     font-size: 15px;
     border-radius: 5px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 1px rgba(250, 247, 247, 0.1);
     margin-bottom: 20px;
     opacity: 0.9;
 }
-.contact-form .text-box:first-child{
+.comment-form .text-box:first-child{
     margin-right: 15px;
 }
-.contact-form textarea{
-    background: #000;
-    color: #fff;
+.comment-form textarea{
+    background: rgb(248, 246, 246);
+    color: #000;
     border: none;
     width: 100%;
     padding: 12px;
@@ -178,14 +177,14 @@ margin-right: 50px;
     max-height: 400px;
     resize: vertical;
     border-radius: 5px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 1px rgba(250, 248, 248, 0.1);
     margin-bottom: 20px;
     opacity: 0.9;
 }
-.contact-form .send-btn{
+.comment-form.send-btn{
     float:right;
-    background: #2E94E3;
-    color: #fff;
+    background: #f9f9fa;
+    color: #000;
     border: none;
     width: 120px;
     height: 40px;
@@ -197,10 +196,84 @@ margin-right: 50px;
     transition: 0.3s;
     transition-property: background;
 }
-.contact-form .send-btn:hover{
+.comment-form.send-btn:hover{
     background: #0582e3;
 }
+.indivudual-comments{
+    padding: 12px;
 
+
+}
+
+
+
+
+
+/* Sign Up */
+.login{
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/login.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.sign-up-form{
+    width: 300px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+    background: #fff;
+    padding: 20px;
+    margin: 8% auto 0;
+    text-align: center;
+}
+.sign-up-form h1{
+    color: #1c8adb;
+    margin-bottom: 30px;
+}
+.input-box{
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid #999;
+    outline: none;
+}
+button{
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.signup-btn{
+
+    background-color: #1c8adb;
+}
+.twitter-btn{
+    background-color: #21afde;
+}
+a{
+    text-decoration: none;
+}
+hr{
+    margin-top: 20px;
+    width: 80%;
+}
+.or{
+    background: #fff;
+    width: 30px;
+    margin: -19px auto 10px;
+}
+img{
+ width: 70px;
+} 
+
+.upload-image img{
+    width: 50%;
+}
 
 /* Folow */
 .follow{
@@ -208,22 +281,39 @@ margin-right: 50px;
     align-items: center;
     justify-content: flex-start;
     margin: 30px 0 30px;
+
 }
 .follow *{
     margin-right: 10px;
+    margin-top: 20px;
 }
 
+/* Links*/
+.links{
+    background: #f2f2f2;
+    color: #616161;
+    font-size: 12px;
+    padding: 35px 0;
+}
+.links-inner{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-gap :10px;
+    align-items: flex-start ;
+    justify-content: center;
+}
+.links li{
+    line-height: 2.8;
+}
 /* Footer*/
 .footer{
     background: #f2f2f2;
     color: #616161;
     font-size: 12px;
     padding: 20px 0;
-    left: 0;
-bottom: 0;
-text-align: center;
-position: fixed;
-width: 100%;
 }
 .footer-inner{
     max-width: 1100px;
@@ -232,7 +322,7 @@ width: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    
+
 }
 .footer div{
     margin-bottom: 20px;
@@ -319,16 +409,16 @@ border-bottom: 0;
     }
 }
 @media screen and (max-width:950px){
-    .contact-section{
+    .comment-section{
         flex-direction: column;
     }
-    .contact-info, .contact-form{
+    .contact-info, .comment-form{
         margin: 30px 50px;
     }
-    .contact-form h2{
+    .comment-form h2{
 font-size: 30px;
     }
-    .contact-form .text-box{
+    .comment-form .text-box{
         width: 100%;
     }
 }
