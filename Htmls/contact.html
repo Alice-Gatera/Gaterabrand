@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../Css/bootstrap.css">  
     <link rel="stylesheet" href="../Css/contact.css">
     <title> Contact page</title>
 </head>
@@ -34,14 +35,14 @@
     </nav>
     <!--Showcase-->
     <header class="showcase">
+
+        <img src="../images/gatera.jpg">
         <h2>GATERA ALICE</h2>
         <p>Software Engineer</p>
         <a href="#" class="btn">
             Welcome <i class="fas fa-chevron-right"></i>
         </a>
     </header>
-  
-
     <!--Contact-->
     <section class="contact-section">
      
@@ -54,47 +55,43 @@
             <div class="contact-form">
                 <h2>Contact Me</h2>
                 <form class="contact">
-                    <input type="text" name="name" class="text-box" placeholder="Your Name" required>
-                    <input type="email" name="email" class="text-box" placeholder="Your Email" required>
-                    <textarea name="message"  rows="5" placeholder="Your Message" required></textarea>
+                    <input type="text" name="name" class="text-box" placeholder=" Name" required>
+                    <input type="email" name="email" class="text-box" placeholder="Email" required>
+                    <textarea name="message"  rows="5" placeholder=" Message" required></textarea>
                     <input type="submit" name="submit" class="send-btn" value="Send" required>
 
                 </form>
             </div>
     </section>
  
-    <section class="follow">
-        <p>Follow Alice</p>
-        <a href="http://facebook.com">
-        <img src="../images/social-fb.png" alt="Facebook">
-        </a>
-        <a href="http://twitter.com">
-            <img src="../images/social-twitter.png" alt="Twitter">
-            </a>
-            <a href="http://linkedin.com">
-                <img src="../images/social-linkedin.png" alt="Linkedin">
-                </a>
-    </section>
-    <!--Footer-->
-    <footer class="footer">
-        <div class="footer-inner">
-  <ul>
-  <li><a href="#">Home</a></li>
-  <li><a href="#">Skills</a></li>
-  <li><a href="#">Project</a></li>
-  <li><a href="#">Experience</a></li>
-  <li><a href="#">Blogs</a></li>
-  <li><a href="#">Contact Me</a></li>
-  <li><a href="#">Login</a></li>
-  <li><a href="#">&copy;Alice GATERA 2020</a></li>
-  </ul>
-        </div>
+    <footer>
+        <section id="Contact">
+            <div class="final">
+                <div class="icons">
+                    <ul>
+                        <li><a href="https://github.com/Alice-Gatera"><i class="fab fa-github"></i></a></li>
+                        <li><a href="mailto:aligatera15@gmail.com"><i class="fas fa-envelope"></i></a></li>
+                        <li><a href="#"><i class="fas fa-phone-alt"></i></a></li>
+                        <li><a href="#"><i class="fas fa-map-marker"></i></a></li>
+
+                    </ul>
+                </div>
+
+                <div class=Copyright>
+                    <p><small>&copy; 2020 Alice GATERA|All Rights Reserved</small></p>
+                </div>
+
+        </section>
+
     </footer>
+
+</section>
 </div>
 </div>
 <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-analytics.js"></script>
+<script src="../Scripts/firebase.js"></script>
 <script src= "../Scripts/contact.js"></script>
 
   </body>

@@ -23,6 +23,7 @@ function renderArticles(doc){
     container.appendChild(spanDate)
     
     var link = document.createElement('a');
+    link.setAttribute('class','blogLinks')
     link.setAttribute('href',`../Htmls/article.html#/${doc.id}`);
     link.appendChild(div);
     Articles.insertAdjacentElement('beforeend',link);

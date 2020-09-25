@@ -3,18 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/bootstrap.css">  
     <link rel="stylesheet" href="../Css/blog.css">
     <title>Display New Article</title>
 </head>
 <body>
-    <h1>Blog</h1>
+    <div class="menu-btn">
+        <i class="fas fa-bars fa-2x"></i>
+    </div>
+      <div class="container">
+          <!--Nav-->
+          <nav class="main-nav">
+     <img src="../images/logoA.jpg" alt="Microsoft" class="logo">
+         
+          <ul class="main-menu show">
+              <li><a href="index.html">Home</a></li>
+              <!-- <li><a href="#skill">Skills</a></li>
+              <li><a href="#">Project</a></li>
+              <li><a href="#">Experience</a></li> -->
+              <li><a href="Htmls\blog.html">Blogs</a></li>
+              <li><a href="Htmls\contact.html"> Contact Me</a></li>
+              <li><a href="Htmls\login.html">Login</a></li>
+          </ul>
+          <ul class="right-menu">
+              <li>
+                  <a href="#">
+                    <i class="fas fa-search" >
+    
+                    </i>
+              </li>
+          </ul>
+        </nav>
+    <h1>BLOG</h1>
     <div class="articles">
 
     </div>
-    <a href="../Htmls/addArticle.html">Add New Article</a>
+      
+    <footer>
+        <section id="Contact">
+            <div class="final">
+                <div class="icons">
+                    <ul>
+                        <li><a href="https://github.com/Alice-Gatera"><i class="fab fa-github"></i></a></li>
+                        <li><a href="mailto:aligatera15@gmail.com"><i class="fas fa-envelope"></i></a></li>
+                        <li><a href="#"><i class="fas fa-phone-alt"></i></a></li>
+                        <li><a href="#"><i class="fas fa-map-marker"></i></a></li>
+    
+                    </ul>
+                </div>
+    
+                <div class=Copyright>
+                    <p><small>&copy; 2020 Alice GATERA|All Rights Reserved</small></p>
+                </div>
+    
+        </section>
+
+    </footer>
     <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-analytics.js"></script>
+    <script src="../Scripts/firebase.js"></script>
     <script src= "../Scripts/blog.js"></script>
 </body>
 </html>

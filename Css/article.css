@@ -35,9 +35,8 @@ list-style: none;
     padding:20px 0;
     font-size: 13px;
 }
-.main-nav.logo{
+.main-nav .logo{
     width: 60px;
-    height: 100%;
 }
 .main-nav ul{
     display: flex;
@@ -77,13 +76,38 @@ list-style: none;
 .btn:hover{
     opacity: 0.9;
 }
-.add-comment{
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    padding: 18px;
 
-}
+input[type=name],textarea{
+    width: 300px;
+    margin: 15px;
+    padding: 18px;
+    background: #fff;
+    border: none;
+    border-bottom: 1px solid gray;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  
+  input{
+    height: 25px;
+  }
+  input[type=submit]{
+    width: 300px;
+    border: none;
+    background-color: rgb(25, 26, 25);
+    color:white;
+    height: 25px;
+    margin-top: 15px;
+    font-weight: bold;
+  
+    
+  }
+  input[type=submit]:hover{
+     cursor: pointer;
+     background-color:#fff;
+     color:rgb(15, 15, 15);
+  }
 textarea{
     margin-top: 20px;
     padding: 18px;
@@ -115,6 +139,62 @@ button{
 
 
 }
+footer {
+    background-color: #333333;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .rog .descr ol li a {
+    text-decoration: none;
+  }
+  
+  .skills {
+    width: 500px;
+    margin: 50px auto 0;
+    padding: 20px;
+  }
+  
+  .rog .lang {
+    margin-top: 50px;
+  }
+  
+  .rog .descr {
+    margin-top: 30px;
+  }
+  
+  #Contact .icons ul li {
+    display: inline;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .icons {
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .fas {
+    color: white;
+  }
+  
+  .fas:hover {
+    color: #bf4080;
+  }
+  
+  .fab {
+    color: white;
+  }
+  
+  .fab:hover {
+    color: #bf4080;
+  }
+  
+  .Copyright {
+    text-align: center;
+    color: white;
+    border-top: #595959 solid 1px;
+  }
 
 .comment-section{
     width: 100%;
@@ -208,86 +288,6 @@ margin-right: 50px;
 
 
 
-
-/* Sign Up */
-.login{
-    margin: 0;
-    padding: 0;
-    background-image: url(../images/login.jpg);
-    background-size: cover;
-    background-position: center;
-}
-.sign-up-form{
-    width: 300px;
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
-    background: #fff;
-    padding: 20px;
-    margin: 8% auto 0;
-    text-align: center;
-}
-.sign-up-form h1{
-    color: #1c8adb;
-    margin-bottom: 30px;
-}
-.input-box{
-    border-radius: 20px;
-    padding: 10px;
-    margin: 10px 0;
-    width: 100%;
-    border: 1px solid #999;
-    outline: none;
-}
-button{
-    color: #fff;
-    width: 100%;
-    padding: 10px;
-    border-radius: 20px;
-    font-size: 15px;
-    margin: 10px 0;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-.signup-btn{
-
-    background-color: #1c8adb;
-}
-.twitter-btn{
-    background-color: #21afde;
-}
-a{
-    text-decoration: none;
-}
-hr{
-    margin-top: 20px;
-    width: 80%;
-}
-.or{
-    background: #fff;
-    width: 30px;
-    margin: -19px auto 10px;
-}
-img{
- width: 70px;
-} 
-
-.upload-image img{
-    width: 50%;
-}
-
-/* Folow */
-.follow{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin: 30px 0 30px;
-
-}
-.follow *{
-    margin-right: 10px;
-    margin-top: 20px;
-}
-
 /* Links*/
 .links{
     background: #f2f2f2;
@@ -309,38 +309,7 @@ img{
     line-height: 2.8;
 }
 /* Footer*/
-.footer{
-    background: #f2f2f2;
-    color: #616161;
-    font-size: 12px;
-    padding: 20px 0;
-}
-.footer-inner{
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px 0 20px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
 
-}
-.footer div{
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.footer div i{
-    margin-right: 10px;
-}
-.footer ul{
-    display: flex;
-    flex-wrap: wrap;
-}
-.footer li{
-margin-right: 30px;
-margin-bottom: 20px;
-}
 @media(max-width: 700px){
     .menu-btn{
         display: block;

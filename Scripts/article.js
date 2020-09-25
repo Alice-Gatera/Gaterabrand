@@ -1,18 +1,4 @@
-var firebaseConfig = {
-    apiKey: "AIzaSyB0JOybrzzCstQQhPhA0hyB8vTHa4lYxu4",
-    authDomain: "gaterabrand.firebaseapp.com",
-    databaseURL: "https://gaterabrand.firebaseio.com",
-    projectId: "gaterabrand",
-    storageBucket: "gaterabrand.appspot.com",
-    messagingSenderId: "847513202370",
-    appId: "1:847513202370:web:36e3c63b0ce5998fe3d55b",
-    measurementId: "G-EPTP28G5XM"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-  
-  var db = firebase.firestore()
+
 
 var saveAddress = window.location.href;
 saveAddress = saveAddress.split('/').reverse();
@@ -45,19 +31,20 @@ db.collection("Articles").doc(id).get().then(doc => {
     renderBlog(doc);
 
    })
-
-var commentform = document.querySelector(".add-comment")
-commentform.addEventListener("submit",(e) =>{
+// add comment on article
+var addComment= document.querySelector(".add-comment")
+addComment.addEventListener("submit",(e) =>{
    e.preventDefault()
    db.collection("Comments").add({
-       name: commentform.name.value,
-       Comment:commentform.message.value,
+       name: addComment.name.value,
+       Comment: addComment.message.value,
        id: id,
        Date: new Date()
    })
- commentform.reset()
+ addComment.reset()
 })
  var displaycomment = document.querySelector(".display-comment")
+ 
 function renderComments(doc){
 var indivudualcomments = document.createElement("div")
 indivudualcomments.setAttribute("class","indivudual-comments")
