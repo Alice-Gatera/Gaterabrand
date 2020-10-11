@@ -107,6 +107,8 @@ ul {
   width: 78%;
   background-color: #999;
   z-index: 4;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 .side-nav {
   position: absolute;
@@ -115,6 +117,8 @@ ul {
   height: 100vh;
   z-index: 3;
   padding-top: 44px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 .side-nav ul {
   list-style: none;
@@ -138,42 +142,85 @@ ul {
 .main-content h1 {
   text-align: center;
   text-transform: uppercase;
+  position: absolute;
 }
 .articles {
-  width: 60%;
+  width: 50%;
   margin-left: 250px;
-  margin-right: 250px;
-  padding-right: 20px;
-}
-.personalArticles {
   margin-top: 20px;
+}
+.content {
+  display: flex;
+  /* flex-direction: column; */
+  margin-top: 20px;
+  /* margin-left: 25px;
+  margin-right: 25px; */
+  text-align: center;
   color: black;
   background: darkgrey;
-  display: flex;
   border: 1px solid black;
   padding: 20px;
-  font-size: 25px;
+  font-size: 10px;
   width: 100%;
-  font-size: 1em;
-  /* margin-top: 56px; */
-  /* margin-left: 780px; */
 }
-.personalArticles img {
-  align-self: flex-start;
-  width: 150px;
-  height: 100px;
+.personalComments {
+  display: flex;
+  flex-direction: column;
+  background-color: hotpink;
+}
+h1 {
+  text-align: center;
+}
+span {
+  display: block;
+  margin: 10px;
+  width: 100%;
+}
+.list {
+  background: grey;
+  width: 78%;
+  margin: 10px;
+  text-align: justify;
+}
+.infos {
+  font-weight: bold;
+}
+.contactMessage {
+  background: white;
+}
+#messages-list {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+*/ input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #555;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  background-color: lightblue;
 }
 a {
   text-decoration: none;
 }
-span {
-  padding: 15px;
+
+h2 {
+  display: flex;
+  flex-direction: column;
+}
+div {
+  color: black;
 }
 button {
   margin: 8px;
   background: grey;
   color: white;
-  align-items: flex-end;
 }
 @media screen and (min-width: 600px) {
   .side-nav {
@@ -195,7 +242,6 @@ button {
 @media screen and (min-width: 1000px) {
   .side-nav {
     width: 200px;
-    flex: 50%;
   }
   .side-nav ul li {
     text-align: left;
@@ -208,58 +254,5 @@ button {
   }
   .main-content {
     margin-left: 200px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .header {
-    right: 0;
-    margin-right: 20px;
-  }
-  .header .nav-trigger {
-    margin-left: 0 !important;
-  }
-
-  .side-nav {
-    z-index: 999;
-  }
-
-  .side-nav {
-    left: -260px;
-    opacity: 0;
-  }
-  #hit-menu {
-    display: block;
-  }
-  #header .button-menu-mobile {
-    display: block;
-    opacity: 1;
-  }
-  #header .menu-modulos .menu-modulosInner {
-    padding: 0;
-  }
-
-  .shape-remove-shadow_green,
-  .shape-remove-shadow_white {
-    display: none;
-  }
-  #conteudo .conteudo-inner {
-    padding-left: 0 !important;
-  }
-
-  #conteudo .conteudo-wrapper {
-    padding: 20px 10px;
-  }
-  .header-nomeEmpresa_mobile {
-    font-size: 14px;
-  }
-
-  .borderradius .button-actions {
-    right: 30px;
-    width: 40px;
-    height: 40px;
-  }
-  .borderradius .boxWrapperActions {
-    bottom: 60px;
-    right: 80px;
   }
 }

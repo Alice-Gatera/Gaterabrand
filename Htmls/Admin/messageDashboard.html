@@ -6,13 +6,48 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../../Css/dashboard.css">
+    <link rel="stylesheet" href="../../Css/messageDashboard.css">
     <title>Messages Dashboard</title>
  
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="../Scripts/dashboard.js"></script>
+<!-- <script src="../Scripts/dashboard.js"></script> -->
 </head>
+
+<div class="menu-btn">
+    <i class="fas fa-bars fa-2x"></i>
+</div>
+  <div class="container">
+      <!--Nav-->
+      <nav class="main-nav">
+ <img src="../../images/logoA.jpg" alt="Microsoft" class="logo">
+     
+      <ul class="main-menu show">
+          <li><a href="../../index.html">Home</a></li>
+          <!-- <li><a href="#skill">Skills</a></li>
+          <li><a href="#">Project</a></li>
+          <li><a href="#">Experience</a></li> -->
+          <li><a href="../../Htmls/blog.html">Blogs</a></li>
+          <li><a href="../../Htmls/contact.html"> Contact Me</a></li>
+          <li><a href="../Admin/articleDashboard.html">Dashboard</a></li>
+          <li><a href="../../Htmls/login.html">Login</a></li>
+      </ul>
+      <ul class="right-menu">
+          <li>
+              <a href="#">
+                <i class="fas fa-search" >
+
+                </i>
+          </li>
+      </ul>
+    </nav>
+    <!--Showcase-->
+    <header class="showcase">
+
+        <img src="../../images/gatera.jpg">
+    </header>
 <body>
+    
     <div class="header">
         <a href="#" class="nav-trigger"><span>
         </span></a>
@@ -21,12 +56,12 @@
 <nav>
     <ul>
         <li>
-            <a href="./profile.html">
+            <!-- <a href="./profile.html">
                 <span>
                     <i class="fa fa-user"> </i></span>
 <span>Profile</span>
             </a>
-        </li>
+        </li> -->
         <li>
             <a href="./userDashboard.html">
                 <span>
@@ -35,20 +70,20 @@
             </a>
         </li>
   <li>
-    <a href="./messageDashboard.html">
+    <a href="../Admin/messageDashboard.html">
         <span><i class="fa fa-envelope"></i></span>
         <span> Messages</span>
     </a>
 </li>
 <li class="active">
     <a href="./commentDashboard.html">
-        <span><i class="fa fa-bar-chart"></i></span>
+        <span><i class="fa fa-comments"></i></span>
         <span>Comments</span>
     </a>
 </li>
 <li>
     <a href="./articleDashboard.html">
-        <span><i class="fa fa-credit-card-alt"></i></span>
+        <span><i class="fas fa-newspaper"></i></span>
         <span>Articles
         </span>
     </a>
@@ -56,8 +91,20 @@
 </ul>
 </nav>
     </div>
-    <div class="main-content">
-Messages
-    </div>
-</body>
+
+<div class="main-content">
+    <h1>Message</h1>
+    <ul>
+    <form id="add-messages"></form>
+</ul>
+    <ul id="messages-list"></ul>
+</div>  
+
+      <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+      <!-- <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-analytics.js"></script> -->
+      <script src="../../Scripts/config.js"></script>
+      <!-- <script src="../../Scripts/blogDashboard.js"></script> -->
+      <script src="../../Scripts/contact.js"></script>
+    </body>
 </html>

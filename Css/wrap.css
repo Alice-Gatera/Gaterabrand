@@ -1,0 +1,97 @@
+.flex {
+    display: flex;
+}
+.no-wrap {
+    flex-wrap: no-wrap;
+}
+.wrap {
+    flex-wrap: wrap;
+}
+.col {
+    flex-basis: 200px;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+
+
+
+
+
+
+
+/* Demo decoration */
+body {
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.flex {
+    margin: 0 auto;
+    counter-reset: col;
+    background: #EEE;
+    animation: resize 6s infinite;
+}
+.col {
+    height: 100px;
+    margin: .5em;
+    background: turquoise;
+    counter-increment: col;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    line-height: 100px;
+    
+    &::before {
+        content: "Col " counter(col);
+    }
+}
+
+p {
+    margin-top: 2em;
+    margin-bottom: .5em;
+    font-weight: bold;
+    color: darkturquoise;
+}
+
+div + p {
+    color: darksalmon;  
+}
+
+.flex + p + .flex .col {
+    background: salmon;
+}
+
+@keyframes resize {
+    0%, 100% {
+        width: 100%;
+    }
+    50% {
+        width: 50%;
+    }
+}
+
+@media (max-width: 520px) {
+    body::before {
+        content: 'Best on wider screens.';
+        display: block;
+        margin: 1em;
+        fon-weight: bold;
+        color: #444;
+    }
+}
+
+@media (prefers-reduced-motion) {
+  .flex {
+    animation: none;
+  }
+    
+    body::after {
+        content: 'Resize your screen to see how it behaves';
+        display: block;
+        font-weight: bold;
+        color: #444;
+        margin: 2em 0;
+    }
+}

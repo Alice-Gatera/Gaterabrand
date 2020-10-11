@@ -37,6 +37,7 @@ var vars = query.split("=");
 var blogId = vars[1];
 console.log("Blog id", blogId);
 var editArticle = document.querySelector(".article");
+var deleteArticle = document.querySelector(".article");
 db.collection("Articles")
   .doc(blogId)
   .get()
@@ -45,7 +46,8 @@ db.collection("Articles")
     var blog = res.data();
     editArticle.title.value = blog.Title;
     editArticle.article.value = blog.Content;
-    editArticle.submit.value = `Edit ${blog.Title.toUpperCase()}`;
+    editArticle.submit.value = `Edit`;
+    deleteArticle.submit.value = `Delete`;
   });
 editArticle.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -60,4 +62,38 @@ editArticle.addEventListener("submit", (e) => {
       editArticle.reset();
       window.location.href = "./Admin/articleDashboard.html";
     });
+  editArticle
+    .addEventListener("submit", (e) => {
+      e.preventDefault();
+      console.log(
+        "Clicked",
+        editArticle.title.value,
+        editArticle.article.value
+      );
+      db.collection("Articles").doc(id).delete();
+      // .doc(blogId)
+      // .delete({
+      //   Title: deleteArticle.title.value,
+      //   Content: deleteArticle.article.value,
+    })
+    .then(() => {
+      editArticle.reset();
+      window.location.href = "./Admin/articleDashboard.html";
+    });
 });
+
+// var query = window.location.search.substring(1);
+// var vars = query.split("=");
+// var blogId = vars[1];
+// console.log("Blog id", blogId);
+// var editArticle = document.querySelector(".article");
+// db.collection("Articles")
+//   .doc(blogId)
+//   .get()
+//   .then((res) => {
+//     console.log("Blog data for id", blogId, res.data());
+//     var blog = res.data();
+//     editArticle.title.value = blog.Title;
+//     editArticle.article.value = blog.Content;
+//     editArticle.submit.value = `Edit ${blog.Title.toUpperCase()}`;
+//   });

@@ -43,3 +43,9 @@ newArticle.addEventListener("submit", (e) => {
   });
   newArticle.reset();
 });
+
+var deleteArticle = document.querySelector(".");
+deleteArticle.addEventListener("submit", (e) => {
+  e.defaultPrevented();
+  db.collection("Articles").doc(id).delete();
+});

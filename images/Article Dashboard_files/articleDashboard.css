@@ -30,9 +30,9 @@ ul {
   padding: 20px 0;
   font-size: 13px;
 }
-.main-nav img {
-  width: 80px;
-  height: 40px;
+.main-nav.logo {
+  width: 60px;
+  height: 100%;
 }
 .main-nav ul {
   display: flex;
@@ -104,7 +104,7 @@ ul {
 .header {
   position: absolute;
   height: 44px;
-  width: 78%;
+  width: 100%;
   background-color: #999;
   z-index: 4;
 }
@@ -135,15 +135,9 @@ ul {
 .main-content {
   padding: 44px;
 }
-.main-content h1 {
-  text-align: center;
-  text-transform: uppercase;
-}
 .articles {
-  width: 60%;
+  width: 50%;
   margin-left: 250px;
-  margin-right: 250px;
-  padding-right: 20px;
 }
 .personalArticles {
   margin-top: 20px;
@@ -153,10 +147,7 @@ ul {
   border: 1px solid black;
   padding: 20px;
   font-size: 25px;
-  width: 100%;
-  font-size: 1em;
-  /* margin-top: 56px; */
-  /* margin-left: 780px; */
+  width: 95%;
 }
 .personalArticles img {
   align-self: flex-start;
@@ -168,12 +159,6 @@ a {
 }
 span {
   padding: 15px;
-}
-button {
-  margin: 8px;
-  background: grey;
-  color: white;
-  align-items: flex-end;
 }
 @media screen and (min-width: 600px) {
   .side-nav {
@@ -195,7 +180,6 @@ button {
 @media screen and (min-width: 1000px) {
   .side-nav {
     width: 200px;
-    flex: 50%;
   }
   .side-nav ul li {
     text-align: left;
@@ -208,58 +192,5 @@ button {
   }
   .main-content {
     margin-left: 200px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .header {
-    right: 0;
-    margin-right: 20px;
-  }
-  .header .nav-trigger {
-    margin-left: 0 !important;
-  }
-
-  .side-nav {
-    z-index: 999;
-  }
-
-  .side-nav {
-    left: -260px;
-    opacity: 0;
-  }
-  #hit-menu {
-    display: block;
-  }
-  #header .button-menu-mobile {
-    display: block;
-    opacity: 1;
-  }
-  #header .menu-modulos .menu-modulosInner {
-    padding: 0;
-  }
-
-  .shape-remove-shadow_green,
-  .shape-remove-shadow_white {
-    display: none;
-  }
-  #conteudo .conteudo-inner {
-    padding-left: 0 !important;
-  }
-
-  #conteudo .conteudo-wrapper {
-    padding: 20px 10px;
-  }
-  .header-nomeEmpresa_mobile {
-    font-size: 14px;
-  }
-
-  .borderradius .button-actions {
-    right: 30px;
-    width: 40px;
-    height: 40px;
-  }
-  .borderradius .boxWrapperActions {
-    bottom: 60px;
-    right: 80px;
   }
 }

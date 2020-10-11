@@ -6,9 +6,8 @@ function renderArticles(doc) {
   container.setAttribute("class", "articleImg");
   var div = document.createElement("div");
   div.setAttribute("class", "personalArticles");
-  div.setAttribute("id", `${doc.id}`);
-  //var span = document.createElement("span");
-  //span.textContent = doc.data().Title;
+  var span = document.createElement("span");
+  span.textContent = doc.data().Title;
   var spanDate = document.createElement("span");
   var dateObj = doc.data().Date.toDate();
   var timeStamp = new Date(dateObj);
@@ -16,57 +15,27 @@ function renderArticles(doc) {
   var year = timeStamp.getFullYear();
   var date = timeStamp.toLocaleString("en-GB", { day: "2-digit" });
   var result = `${date}-${month}-${year}`;
-  var articleId = document.createElement("small");
-  var id = document.createTextNode(doc.id);
-  var blogId = div.getAttribute("id");
-  var link = document.createElement("a");
-  link.textContent = doc.data().Title;
-  link.setAttribute("href", `../Htmls/singleArticle.html#/${blogId}`);
 
   spanDate.textContent = result;
   div.appendChild(img);
   div.appendChild(container);
-  // link.appendChild(span);
-  // div.appendChild(link);
-  // articleId.appendChild(id);
 
   var buttonEdit = document.createElement("button");
-  var buttonDelete = document.createElement("button");
-  buttonEdit.innerHTML = `Edit`;
-
+  buttonEdit.innerHTML = "Edit " + doc.data().Title;
   buttonEdit.onclick = function () {
     window.location.href = `../editArticle.html?id=${doc.id}`;
     console.log("doc", doc.id);
     return false;
   };
-  buttonDelete.innerHTML = `Delete`;
-
-  container.appendChild(link);
+  container.appendChild(span);
   container.appendChild(spanDate);
-  container.appendChild(articleId);
   container.appendChild(buttonEdit);
-  container.appendChild(buttonDelete);
 
   var link = document.createElement("a");
   link.setAttribute("class", "blogLinks");
   //   link.setAttribute("href", `../Htmls/article.html#/${doc.id}`);
   link.appendChild(div);
   Articles.insertAdjacentElement("beforeend", link);
-
-  if (buttonDelete !== null) {
-    buttonDelete.addEventListener("click", async () => {
-      db.collection("Articles")
-        .doc(blogId)
-        .delete()
-        .then(function () {
-          console.log("Document successfully deleted!");
-          location.reload();
-        })
-        .catch(function (error) {
-          console.error("Error removing document: ", error);
-        });
-    });
-  }
 }
 
 db.collection("Articles")
@@ -76,3 +45,4 @@ db.collection("Articles")
       renderArticles(doc);
     });
   });
+function deleteArticle() {}
