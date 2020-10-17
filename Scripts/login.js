@@ -1,9 +1,4 @@
-// Initialize Firebase
-// firebase.initializeApp(firebaseConfig);
-// firebase.analytics();
-//make auth and firestore services
-const auth = firebase.auth()
-// const db = firebase.firestore()
+
 const loginForm = document.querySelector('.userForm')
 //login form
 loginForm.addEventListener('submit', (e) => {
@@ -16,8 +11,8 @@ loginForm.addEventListener('submit', (e) => {
     {
     auth.signInWithEmailAndPassword(email, password).then(() => {
         loginForm.reset()
-        window.open("../Dashboard/index.html")
-        window.location.href = "../Dashboard/index.html"
+        window.open("../Htmls/Admin/articleDashboard.html")
+        window.location.href = "Htmls\Admin\articleDashboard.html"
     }).catch((e) => {
       e = e["code"]
       if(e == "auth/wrong-password"){

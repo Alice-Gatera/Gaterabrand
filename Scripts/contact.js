@@ -1,7 +1,4 @@
-// // Initialize Firebase
-// firebase.initializeApp(firebaseConfig);
-// firebase.analytics();
-// var db = firebase.firestore();
+
 
 var messageList = document.querySelector("#messages-list");
 const form = document.querySelector(".contact");
@@ -53,10 +50,18 @@ form.addEventListener("submit", (e) => {
   form.email.value = " ";
   form.message.value = " ";
 });
-
-// //delete data
-// cross.addEventListener("click", (e) => {
-//   e.stopPropagation();
-//   let id = e.target.parentElement.getAttribute("data-id");
-//   db.collection("Contact").doc(id).delete();
-// });
+  //Logout
+  const logout = document.querySelector(".logout");
+  logout.addEventListener("click", (e) => {
+    e.preventDefault();
+    auth.signOut().then(() => {
+      console.log('user logged out');
+      window.location.replace("/index.html");
+    })
+  })
+  //Handle Account Status
+  firebase.auth().onAuthStateChanged(user => {
+    if(!user) {
+      window.location = '../login.html'; //If User is not logged in, redirect to login page
+    }
+  });

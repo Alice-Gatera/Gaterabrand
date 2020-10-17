@@ -45,7 +45,7 @@ db.collection("Articles")
     console.log("Blog data for id", blogId, res.data());
     var blog = res.data();
     editArticle.title.value = blog.Title;
-    editArticle.article.value = blog.Content;
+    editArticle.article.value = blog.Content ("\n\n");
     editArticle.submit.value = `Edit`;
     deleteArticle.submit.value = `Delete`;
   });
@@ -71,10 +71,6 @@ editArticle.addEventListener("submit", (e) => {
         editArticle.article.value
       );
       db.collection("Articles").doc(id).delete();
-      // .doc(blogId)
-      // .delete({
-      //   Title: deleteArticle.title.value,
-      //   Content: deleteArticle.article.value,
     })
     .then(() => {
       editArticle.reset();
@@ -82,18 +78,3 @@ editArticle.addEventListener("submit", (e) => {
     });
 });
 
-// var query = window.location.search.substring(1);
-// var vars = query.split("=");
-// var blogId = vars[1];
-// console.log("Blog id", blogId);
-// var editArticle = document.querySelector(".article");
-// db.collection("Articles")
-//   .doc(blogId)
-//   .get()
-//   .then((res) => {
-//     console.log("Blog data for id", blogId, res.data());
-//     var blog = res.data();
-//     editArticle.title.value = blog.Title;
-//     editArticle.article.value = blog.Content;
-//     editArticle.submit.value = `Edit ${blog.Title.toUpperCase()}`;
-//   });

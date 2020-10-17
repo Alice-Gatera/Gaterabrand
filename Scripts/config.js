@@ -13,3 +13,4 @@ var firebaseConfig = {
   // firebase.analytics();
 
   var db = firebase.firestore()
+  const auth = firebase.auth()

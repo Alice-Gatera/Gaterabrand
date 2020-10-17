@@ -9,18 +9,39 @@
     <title>Comments Dashboard</title>
   </head>
   <body>
+    <div class="container">
+      <div class="topnav" id="myTopnav">
+        <img src="/images/logoA.jpg" alt="" class="logo">
+        <a href="/index.html">Home</a>
+        <a href="../blog.html">Blogs</a>
+        <a href="../contact.html"> Contact Me</a>
+        <a href="../Admin/articleDashboard.html">Dashboard</a>
+        <a href="../login.html">Login</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+       <!--Showcase-->
+    <header class="showcase">
+
+      <img src="../../images/gatera.jpg">
+      <h2>GATERA ALICE</h2>
+      <!-- <p>Software Engineer</p> -->
+  </header>
     <div class="header">
       <a href="#" class="nav-trigger"><span> </span></a>
     </div>
     <div class="side-nav">
       <nav>
         <ul>
-          <!-- <li>
-            <a href="./profile.html">
-              <span> <i class="fa fa-user"> </i></span>
-              <span>Profile</span>
+          <li>
+            <a href="#">
+             
+              <span>  <img src=""> </span>
+              <span class="logout"><i class="fa fa-sign-out"></i></span>
+              <span>Logout</span>
             </a>
-          </li> -->
+          </li>
           <li>
             <a href="./userDashboard.html">
               <span> <i class="fa fa-user"> </i></span>
@@ -49,15 +70,22 @@
       </nav>
     </div>
     <div class="main-content">
-      <div class="personalComment">
-        <span>Article title</span>
-        <span>Name</span>
-        <span >Comment</span>
-        <button class="deleteBtn">X</button>
+      <div class="commentDisplay">
+      
         <hr>
       </div>
     </div>
 
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      </script>
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>

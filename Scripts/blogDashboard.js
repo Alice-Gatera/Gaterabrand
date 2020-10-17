@@ -1,3 +1,23 @@
+
+  //Logout
+  const logout = document.querySelector(".logout");
+  logout.addEventListener("click", (e) => {
+    e.preventDefault();
+    auth.signOut().then(() => {
+      console.log('user logged out');
+      window.location.replace("../login.htm");
+    })
+  })
+//Handle Account Status
+firebase.auth().onAuthStateChanged(user => {
+  if(!user) {
+    window.location = '../login.html'; //If User is not logged in, redirect to login page
+  }
+});
+
+
+
+
 var Articles = document.querySelector(".articles");
 function renderArticles(doc) {
   var img = document.createElement("img");
@@ -30,8 +50,11 @@ function renderArticles(doc) {
   // div.appendChild(link);
   // articleId.appendChild(id);
 
+ 
   var buttonEdit = document.createElement("button");
+  buttonEdit.setAttribute("class","modify")
   var buttonDelete = document.createElement("button");
+buttonDelete.setAttribute('class',"modify")
   buttonEdit.innerHTML = `Edit`;
 
   buttonEdit.onclick = function () {
@@ -41,11 +64,15 @@ function renderArticles(doc) {
   };
   buttonDelete.innerHTML = `Delete`;
 
+  var divActions = document.createElement("div")
+  divActions.setAttribute('class','actionBlock')
+
+  divActions.appendChild(buttonEdit)
+  divActions.appendChild(buttonDelete)
   container.appendChild(link);
   container.appendChild(spanDate);
   container.appendChild(articleId);
-  container.appendChild(buttonEdit);
-  container.appendChild(buttonDelete);
+container.appendChild(divActions);
 
   var link = document.createElement("a");
   link.setAttribute("class", "blogLinks");
@@ -76,3 +103,5 @@ db.collection("Articles")
       renderArticles(doc);
     });
   });
+
+

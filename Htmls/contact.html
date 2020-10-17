@@ -9,31 +9,18 @@
     <title> Contact page</title>
 </head>
 <body>
-<div class="menu-btn">
-    <i class="fas fa-bars fa-2x"></i>
-</div>
   <div class="container">
-      <!--Nav-->
-      <nav class="main-nav">
- <img src="../images/logoA.jpg" alt="Microsoft" class="logo">
-     
-      <ul class="main-menu show">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="blog.html">Blogs</a></li>
-          <li><a href="contact.html"> Contact Me</a></li>
-          <li><a href="../Htmls/Admin/articleDashboard.html">Dashboard</a></li>
-          <li><a href="login.html">Login</a></li>
-      </ul>
-      <ul class="right-menu">
-          <!-- <li>
-              <a href="#">
-                <i class="fas fa-search" >
-
-                </i>
-                
-          </li> -->
-      </ul>
-    </nav>
+    <div class="topnav" id="myTopnav">
+        <!-- <img src="/images/logoA.jpg" alt="" class="logo"> -->
+        <a href="/index.html">Home</a>
+        <a href="/Htmls/blog.html">Blogs</a>
+        <a href="/Htmls/contact.html"> Contact Me</a>
+        <a href="./Admin/articleDashboard.html">Dashboard</a>
+        <a href="./login.html">Login</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
     <!--Showcase-->
     <header class="showcase">
 
@@ -60,8 +47,6 @@
                 </form>
             </div>
     </section>
-</div>
-</div>
 
 </section>
     <footer>
@@ -76,7 +61,7 @@
 
                     </ul>
                 </div>
-
+            </div>
                 <div class=Copyright>
                     <p><small>&copy; 2020 Alice GATERA|All Rights Reserved</small></p>
                 </div>
@@ -85,7 +70,16 @@
 
     </footer>
 
-
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
 <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-analytics.js"></script>

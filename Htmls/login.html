@@ -3,57 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" /> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <link rel="stylesheet" href="../Css/login.css">
     <title> Login page</title>
 </head>
 <body>
-    <div class="menu-btn">
-        <i class="fas fa-bars fa-2x"></i>
-    </div>
       <div class="container">
-          <!--Nav-->
-          <nav class="main-nav">
-     <img src="../images/logoA.jpg" alt="" class="logo">
-         
-          <ul class="main-menu show">
-              <li><a href="../index.html">Home</a></li>
-              <li><a href="blog.html">Blogs</a></li>
-              <li><a href="contact.html"> Contact Me</a></li>
-              <li><a href="../Htmls/Admin/articleDashboard.html">Dashboard</a></li>
-              <li><a href="login.html">Login</a></li>
-          </ul>
-          <ul class="right-menu">
-              <!-- <li>
-                  <a href="#">
-                    <i class="fas fa-search" >
-    
-                    </i>
-                    
-              </li> -->
-          </ul>
-        </nav>
+        <div class="topnav" id="myTopnav">
+            <!-- <img src="/images/logoA.jpg" alt="" class="logo"> -->
+            <a href="/index.html">Home</a>
+            <a href="./blog.html">Blogs</a>
+            <a href="./contact.html"> Contact Me</a>
+            <a href="./Admin/articleDashboard.html">Dashboard</a>
+            <a href="./login.html">Login</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
     <!--Login-->
     <section class="login">
             <div class="nav-logout">
                 <ul id="nav" class="right">
                     <li class="logged-in">
-                      <a href="#" class="grey-text" id="logout">Logout</a>
+                      
                     </li>
                 </ul>
             </div>
         <div class="user-Message">
-            <p>Incorrect password or username</p>
+      
             </div>
     <div class="sign-up-form">
         <img src="../images/user-icon.png">
         <h1>Sign In now</h1>
-        <form class="userForm">
+        <form class="userForm" method="POST">
             <input type="email" name="email" class="input-box" placeholder="Your Email" required>
             <input type="password" name="password" class="input-box" placeholder="Your Password" required>
-            <button type="button"  class="signup-btn">Login</button>
+            <button type="submit"  class="signup-btn">Login</button>
         </form>
     </div>
+
     </div>
 </section>
 <footer>
@@ -78,13 +67,23 @@
 </footer>
 
 </section>
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
 <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
-<!-- <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script> -->
-<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
-<!-- <script src="../Scripts/config.js"></script> -->
-<script src="../Scripts/login.js"></script>
-
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
+<script src="../Scripts/login.js" ></script>
+<script src="../Scripts/config.js" ></script>
+<!-- <script src="../Scripts/login.js"></script> -->
 </body>
 </html>
 
