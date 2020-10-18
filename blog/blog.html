@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" /> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../Css/blog.css">
+    <title>Display New Article</title>
+</head>
+<body>
+  <div class="container">
+    <div class="topnav" id="myTopnav">
+<!-- <img src="/images/logoA.jpg" alt="" class="logo"> -->
+<a href="/index.html">Home</a>
+<a href="/Htmls/blog.html">Blogs</a>
+<a href="/Htmls/contact.html"> Contact Me</a>
+<a href="/Htmls/Admin/articleDashboard.html">Dashboard</a>
+<a href="/Htmls/login.html">Login</a>
+<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+  <i class="fa fa-bars"></i>
+</a>
+</div>
+<!--Showcase-->
+<header class="showcase">
+
+<img src="../images/gatera.jpg">
+<h2>GATERA ALICE</h2>
+</header>
+    <div class="articles">
+
+    </div>
+<!-- <div class="row">
+  <div class="image">
+  </div>
+  <div class="content"></div> -->
+
+</div>
+
+      </div>
+      <footer>
+        <section id="Contact">
+            <div class="final">
+                <div class="icons">
+                    <ul>
+                        <li><a href="https://github.com/Alice-Gatera"><i class="fab fa-github"></i></a></li>
+                        <li><a href="mailto:aligatera15@gmail.com"><i class="fas fa-envelope"></i></a></li>
+                        <li><a href="#"><i class="fas fa-phone-alt"></i></a></li>
+                        <li><a href="#"><i class="fas fa-map-marker"></i></a></li>
+    
+                    </ul>
+                </div>
+    
+                <div class=Copyright>
+                    <p><small>&copy; 2020 Alice GATERA|All Rights Reserved</small></p>
+                </div>
+    
+        </section>
+    
+    </footer>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-analytics.js"></script>
+    <script src="../Scripts/config.js"></script>
+    <script src= "../Scripts/blog.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

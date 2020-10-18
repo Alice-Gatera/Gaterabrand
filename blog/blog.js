@@ -6,14 +6,8 @@ function renderArticles(doc){
     var container = document.createElement('div')
     container.setAttribute('class','articleImg')
     var div = document.createElement('div');
-    div.setAttribute('class','personalArticles row' );
-    // div.setAttribute('class','row')
-    // var divImage =document.createElement('div')
-    // divImage.setAttribute('class','col-5')
-    // divImage.appendChild(img)
-    // div.appendChild(divImage)
-    // var divcontent = document.createElement('div')
-    // divcontent.setAttribute('class','col-7')
+    div.setAttribute('class','personalArticles' );
+
     var span  = document.createElement('span');
     span.textContent = doc.data().Title
     var spanDate = document.createElement('span');
@@ -24,11 +18,6 @@ function renderArticles(doc){
    var date = timeStamp.toLocaleString('en-GB', {day:"2-digit"});
    var result = `${date}-${month}-${year}`
     spanDate.textContent = result;
-    
-    // div.appendChild(container)
-    // container.appendChild(span);
-    // container.appendChild(spanDate)
-//   divcontent.appendChild(container)
     div.appendChild(img);
     div.appendChild(container)
     container.appendChild(span);

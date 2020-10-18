@@ -26,7 +26,6 @@ function renderMessage(doc) {
   li.appendChild(name);
   li.appendChild(email);
   li.appendChild(message);
-
   messageList.appendChild(li);
 }
 //to get data
