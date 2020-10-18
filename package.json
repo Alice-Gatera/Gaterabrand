@@ -1,0 +1,31 @@
+{
+  "name": "andelajs",
+  "version": "1.0.0",
+  "description": "It works on my personal blog",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-server": "node server.js",
+    "start-dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alice-Gatera/Gaterabrand.git"
+  },
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "author": "Alice Gatera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alice-Gatera/Gaterabrand/issues"
+  },
+  "homepage": "https://github.com/Alice-Gatera/Gaterabrand#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.5"
+  }
+}
