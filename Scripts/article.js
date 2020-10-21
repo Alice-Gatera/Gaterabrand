@@ -1,7 +1,5 @@
 
 
-
-
 var saveAddress = window.location.href;
 saveAddress = saveAddress.split("/").reverse();
 var id = saveAddress[0];

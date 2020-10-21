@@ -11,8 +11,8 @@ loginForm.addEventListener('submit', (e) => {
     {
     auth.signInWithEmailAndPassword(email, password).then(() => {
         loginForm.reset()
-        window.open("../Htmls/Admin/articleDashboard.html")
-        window.location.href = "Htmls\Admin\articleDashboard.html"
+        // window.open("../Htmls/Admin/articleDashboard.html")
+        window.location.href = "../Htmls/Admin/articleDashboard.html"
     }).catch((e) => {
       e = e["code"]
       if(e == "auth/wrong-password"){

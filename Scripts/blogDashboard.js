@@ -1,4 +1,5 @@
 
+ 
   //Logout
   const logout = document.querySelector(".logout");
   logout.addEventListener("click", (e) => {
@@ -11,7 +12,7 @@
 //Handle Account Status
 firebase.auth().onAuthStateChanged(user => {
   if(!user) {
-    window.location = '../login.html'; //If User is not logged in, redirect to login page
+    window.location.href = '../login.html'; //If User is not logged in, redirect to login page
   }
 });
 

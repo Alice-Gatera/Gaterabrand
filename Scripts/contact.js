@@ -1,4 +1,39 @@
 
+var firebaseConfig = {
+  apiKey: "AIzaSyB0JOybrzzCstQQhPhA0hyB8vTHa4lYxu4",
+  authDomain: "gaterabrand.firebaseapp.com",
+  databaseURL: "https://gaterabrand.firebaseio.com",
+  projectId: "gaterabrand",
+  storageBucket: "gaterabrand.appspot.com",
+  messagingSenderId: "847513202370",
+  appId: "1:847513202370:web:36e3c63b0ce5998fe3d55b",
+  measurementId: "G-EPTP28G5XM"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+// firebase.analytics();
+const auth = firebase.auth()
+var db = firebase.firestore()
+
+
+
+
+//Logout
+const logout = document.querySelector(".logout");
+logout.addEventListener("click", (e) => {
+  e.preventDefault();
+  console.log('user logged out');
+  auth.signOut().then(() => {
+  //   console.log('user logged out');
+    window.location.replace("../login.htm");
+  })
+})
+//Handle Account Status
+firebase.auth().onAuthStateChanged(user => {
+if(!user) {
+  window.location.href = '../login.html'; //If User is not logged in, redirect to login page
+}
+});
 
 var messageList = document.querySelector("#messages-list");
 const form = document.querySelector(".contact");
@@ -49,18 +84,4 @@ form.addEventListener("submit", (e) => {
   form.email.value = " ";
   form.message.value = " ";
 });
-  //Logout
-  const logout = document.querySelector(".logout");
-  logout.addEventListener("click", (e) => {
-    e.preventDefault();
-    auth.signOut().then(() => {
-      console.log('user logged out');
-      window.location.replace("/index.html");
-    })
-  })
-  //Handle Account Status
-  firebase.auth().onAuthStateChanged(user => {
-    if(!user) {
-      window.location = '../login.html'; //If User is not logged in, redirect to login page
-    }
-  });
+
