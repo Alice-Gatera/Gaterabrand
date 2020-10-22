@@ -127,7 +127,7 @@ input[type="submit"] {
   display: inline-block;
 }
 .header-controlMenuButton:hover {
-  background-color: #005a3b;
+  background-color: #171817;
 }
 .header-search {
   width: 260px;
@@ -182,7 +182,7 @@ input[type="submit"] {
   height: 2px;
   left: 0;
   display: none;
-  background-color: #008658;
+  background-color: #141414;
 }
 #header .menu-modulos .menu-modulosBt:hover .menu-modulosFeed {
   display: block;
@@ -416,7 +416,7 @@ input[type="submit"] {
   cursor: pointer;
 }
 .borderradius .button-actions {
-  background-color: #008658;
+  background-color: #141414;
   width: 56px;
   height: 56px;
   bottom: 20px;
@@ -456,7 +456,7 @@ input[type="submit"] {
   top: 6px;
 }
 .borderradius .button-actions:hover {
-  background-color: #006945;
+  background-color: #9fcabb;
 }
 
 .borderradius .button-actions.active .vert {
@@ -632,6 +632,16 @@ input[type="submit"] {
     bottom: 60px;
     right: 80px;
   }
+  .personalArticles {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+  }
+  .personalArticles img {
+    display: flex;
+    height: 100%;
+    width: 40vw;
+  }
 }
 
 /****************************/
@@ -666,12 +676,23 @@ input[type="submit"] {
   .personalArticles {
     display: flex;
     flex-direction: column;
+    width: 40vw;
+  }
+  .personalArticles img {
+    display: flex;
+    height: 100%;
+    width: 20vw;
+  }
+
+  /* .personalArticles {
+    display: flex;
+    flex-direction: column;
     width: 80vw;
   }
   .personalArticles img {
     height: 100%;
     width: 60vw;
-  }
+  } */
 
   .personalArticles .responsive a {
     width: 100%;

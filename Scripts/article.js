@@ -33,7 +33,8 @@ var addComment = document.querySelector(".add-comment");
 addComment.addEventListener("submit", (e) => {
   e.preventDefault();
   db.collection("Comments").add({
-    name: addComment.name.value,
+    fname: addComment.first_name.value,
+    lname: addComment.last_name.value,
     Comment: addComment.message.value,
     id: id,
     Date: new Date(),

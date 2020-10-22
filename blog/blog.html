@@ -6,21 +6,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" /> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <link rel="stylesheet" href="./blog.css">
+    <link rel="stylesheet" href="../Css/sharedFooter.css">
+    <link rel="stylesheet" href="../Css/Css/sharedMenu.css">
     <title>Display New Article</title>
 </head>
 <body>
   <div class="container">
-    <div class="topnav" id="myTopnav">
-<!-- <img src="/images/logoA.jpg" alt="" class="logo"> -->
-<a href="../index.html">Home</a>
+<nav>
+  <div class="logo">
+      <h3><a href="../index.html">Alice gatera</a></h3>
+  </div>
+  <ul class="nav-links">
+    <a href="../index.html">Home</a>
 <a href="./blog.html">Blogs</a>
-<a href="../Htmls/contact.html"> Contact Me</a>
-<!-- <a href="../Htmls/Admin/articleDashboard.html">Dashboard</a> -->
+<a href="../Htmls/contact.html"> Contact</a>
+
 <a href="../Htmls/contact.html">Login</a>
-<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-  <i class="fa fa-bars"></i>
-</a>
-</div>
+  </ul>
+  <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+  </div>
+</nav>
 <!--Showcase-->
 <header class="showcase">
 
@@ -56,20 +64,14 @@
     
     </footer>
     <script>
-        function myFunction() {
-          var x = document.getElementById("myTopnav");
-          if (x.className === "topnav") {
-            x.className += " responsive";
-          } else {
-            x.className = "topnav";
-          }
-        }
+       
         </script>
     <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js"></script>
     <script src="../Scripts/config.js"></script>
     <script src= "../blog/blog.js"></script>
+    <script src="../Scripts/menu.js"></script>
 </body>
 </html>
 

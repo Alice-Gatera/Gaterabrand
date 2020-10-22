@@ -6,21 +6,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" /> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <link rel="stylesheet" href="../Css/Css/login.css">
+    <link rel="stylesheet" href="../Css/sharedFooter.css">
+    <link rel="stylesheet" href="../Css/Css/sharedMenu.css">
     <title> Login page</title>
 </head>
 <body>
       <div class="container">
-        <div class="topnav" id="myTopnav">
-            <!-- <img src="/images/logoA.jpg" alt="" class="logo"> -->
-            <a href="/index.html">Home</a>
-            <a href="../blog/blog.html">Blogs</a>
-            <a href="../Htmls/contact.html"> Contact Me</a>
-            <!-- <a href="./Admin/articleDashboard.html">Dashboard</a> -->
-            <a href="./login.html">Login</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-              <i class="fa fa-bars"></i>
-            </a>
-          </div>
+        <nav>
+            <div class="logo">
+                <h3>Alice gatera</h3>
+            </div>
+            <ul class="nav-links">
+                <a href="/index.html">Home</a>
+                <a href="../blog/blog.html">Blogs</a>
+                <a href="../Htmls/contact.html"> Contact </a>
+                <a href="./login.html">Login</a>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
     <!--Login-->
     <section class="login">
             <div class="nav-logout">
@@ -83,6 +90,7 @@
 <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
 <script src="../Scripts/config.js" ></script>
 <script src="../Scripts/login.js" ></script>
+<script src="../Scripts/menu.js"></script>
 <!-- <script src="../Scripts/login.js"></script> -->
 </body>
 </html>

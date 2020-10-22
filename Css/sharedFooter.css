@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+.twitter-btn {
+  background-color: #21afde;
+}
+a {
+  text-decoration: none;
+}
+hr {
+  margin-top: 20px;
+  width: 80%;
+}
+.or {
+  background: #fff;
+  width: 30px;
+  margin: -19px auto 10px;
+}
+img {
+  width: 150px;
+}
+
+footer {
+  background-color: #333333;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.rog .descr ol li a {
+  text-decoration: none;
+}
+
+.rog .lang {
+  margin-top: 50px;
+}
+
+.rog .descr {
+  margin-top: 30px;
+}
+
+#Contact .icons ul li {
+  display: inline;
+  text-align: center;
+  padding: 10px;
+}
+
+.icons {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.fas {
+  color: white;
+}
+
+.fas:hover {
+  color: #bf4080;
+}
+
+.fab {
+  color: white;
+}
+
+.fab:hover {
+  color: #bf4080;
+}
+
+.Copyright {
+  text-align: center;
+  color: white;
+  border-top: #595959 solid 1px;
+}

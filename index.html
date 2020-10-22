@@ -6,25 +6,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" /> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <link rel="stylesheet" href="./Css/Css/index.css">
+    <link rel="stylesheet" href="./Css/Css/sharedMenu.css">
+    <link rel="stylesheet" href="./Css/sharedFooter.css">
     <title> Alice landing page</title>
 </head>
 <body>
-    <!-- <div class="menu-btn">
-        <i class="fas fa-bars fa-2x"></i>
-    </div> -->
      
   <div class="container">
-            <div class="topnav" id="myTopnav">
-        <!-- <img src="/images/logoA.jpg" alt="" class="logo"> -->
-        <a href="/index.html">Home</a>
-        <a href="./blog/blog.html">Blogs</a>
-        <a href="./Htmls/contact.html"> Contact Me</a>
-        <a href="./Htmls/Admin/articleDashboard.html">Dashboard</a>
-        <a href="./Htmls/login.html">Login</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
-      </div>
+    <nav>
+        <div class="logo">
+            <h3>Alice gatera</h3>
+        </div>
+        <ul class="nav-links">
+            <!-- <img src="/images/logoA.jpg" alt="" class="logo"> -->
+            <a href="/index.html">Home</a>
+            <a href="../blog/blog.html">Blogs</a>
+            <a href="../Htmls/contact.html"> Contact </a>
+            <!-- <a href="./Admin/articleDashboard.html">Dashboard</a> -->
+            <a href="./Htmls/login.html">Login</a>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
     <!--Showcase-->
     <header class="showcase">
 
@@ -82,16 +88,7 @@
          </a>
         </div> 
     </section>
-    <!-- Xbox
-    <section class="xbox">
-        <div class="content">
-            <h2>Xbox Game Pass Ultimate</h2>
-            <p>Xbox Game Pass Ultimate Xbox Live <br>Gold and over 100 high-quality<br> console and PC games. Play together<br> with friends and discover your next<br> favorite game.</p>
-       <a href="#" class="btn">
-           Join Now <i class="fas fa-chevron-right"></i>
-       </a>
-        </div>
-    </section> -->
+  
 
     <!--Title-->
     <div class="title">
@@ -201,15 +198,7 @@
     </section>
 
 </footer>
-<script>
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    }
+<script src="./Scripts/menu.js">
     </script>
   </body>
   </html>

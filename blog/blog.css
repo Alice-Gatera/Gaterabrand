@@ -113,10 +113,8 @@ span {
   flex-direction: column;
   margin-right: 5px;
 }
-footer {
-  /* background-color: #333333;
-  padding: 20px;
-  margin-top: 20px; */
+/* footer {
+
   background-color: #333333;
   padding-top: 10px;
   padding-bottom: 0px;
@@ -168,7 +166,7 @@ footer {
   text-align: center;
   color: white;
   border-top: #595959 solid 1px;
-}
+} */
 .row::after {
   content: "";
   clear: both;

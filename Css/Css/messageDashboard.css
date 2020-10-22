@@ -127,7 +127,7 @@ input[type="submit"] {
   display: inline-block;
 }
 .header-controlMenuButton:hover {
-  background-color: #005a3b;
+  background-color: #171817;
 }
 .header-search {
   width: 260px;
@@ -182,7 +182,7 @@ input[type="submit"] {
   height: 2px;
   left: 0;
   display: none;
-  background-color: #050706;
+  background-color: #141414;
 }
 #header .menu-modulos .menu-modulosBt:hover .menu-modulosFeed {
   display: block;
@@ -340,7 +340,7 @@ input[type="submit"] {
 }
 .shape-remove-shadow_green {
   position: absolute;
-  background: #008658;
+  background: #161616;
   height: 60px;
   width: 10px;
   right: -3px;
@@ -386,7 +386,7 @@ input[type="submit"] {
 #conteudo .conteudo-title {
   font-size: 24px;
   line-height: 28px;
-  color: #008658;
+  color: #141414;
   font-weight: 300;
   margin-bottom: 5px;
   display: block;
@@ -416,7 +416,7 @@ input[type="submit"] {
   cursor: pointer;
 }
 .borderradius .button-actions {
-  background-color: #008658;
+  background-color: #141414;
   width: 56px;
   height: 56px;
   bottom: 20px;
@@ -456,7 +456,7 @@ input[type="submit"] {
   top: 6px;
 }
 .borderradius .button-actions:hover {
-  background-color: #006945;
+  background-color: #9fcabb;
 }
 
 .borderradius .button-actions.active .vert {
@@ -868,7 +868,7 @@ input[type="submit"] {
   z-index: 10;
 }
 .header-topo {
-  background-color: #008658;
+  background-color: #050706;
   height: 60px;
   position: relative;
 }
@@ -886,7 +886,7 @@ input[type="submit"] {
   left: 200px;
   height: 60px;
   width: 60px;
-  background-color: #00784f;
+  background-color: #080808;
   text-align: center;
   cursor: pointer;
 }
@@ -894,7 +894,7 @@ input[type="submit"] {
   display: inline-block;
 }
 .header-controlMenuButton:hover {
-  background-color: #005a3b;
+  background-color: #181a19;
 }
 .header-search {
   width: 260px;
@@ -949,7 +949,7 @@ input[type="submit"] {
   height: 2px;
   left: 0;
   display: none;
-  background-color: #008658;
+  background-color: #080808;
 }
 #header .menu-modulos .menu-modulosBt:hover .menu-modulosFeed {
   display: block;
@@ -1107,7 +1107,7 @@ input[type="submit"] {
 }
 .shape-remove-shadow_green {
   position: absolute;
-  background: #008658;
+  background: #080808;
   height: 60px;
   width: 10px;
   right: -3px;
@@ -1153,7 +1153,7 @@ input[type="submit"] {
 #conteudo .conteudo-title {
   font-size: 24px;
   line-height: 28px;
-  color: #008658;
+  color: #0b0e0d;
   font-weight: 300;
   margin-bottom: 5px;
   display: block;
@@ -1183,7 +1183,7 @@ input[type="submit"] {
   cursor: pointer;
 }
 .borderradius .button-actions {
-  background-color: #008658;
+  background-color: #101111;
   width: 56px;
   height: 56px;
   bottom: 20px;
@@ -1223,7 +1223,7 @@ input[type="submit"] {
   top: 6px;
 }
 .borderradius .button-actions:hover {
-  background-color: #006945;
+  background-color: #050505;
 }
 
 .borderradius .button-actions.active .vert {
@@ -1320,32 +1320,7 @@ input[type="submit"] {
   display: block;
   font-size: 14px;
 }
-/* .main-content {
-  padding: 44px;
-}
-.main-content h1 {
-  text-align: center;
-  text-transform: uppercase;
-}
-.articles {
-  width: 60%;
-}
-.personalArticles {
-  margin-top: 20px;
-  color: black;
-  background: darkgrey;
-  display: flex;
-  border: 1px solid black;
-  padding: 20px;
-  font-size: 25px;
-  width: 100%;
-  font-size: 1em;
-}
-.personalArticles img {
-  align-self: flex-start;
-  width: 150px;
-  height: 100px;
-} */
+
 h1 {
   text-align: center;
 }
@@ -1468,17 +1443,18 @@ input[type="text"]:focus {
     display: block !important;
   }
 
-  .personalArticles {
+  #messages-list {
     display: flex;
     flex-direction: column;
-    width: 80vw;
-  }
-  .personalArticles img {
-    height: 100%;
     width: 60vw;
   }
+  #messages-list span {
+    display: flex;
+    /* height: 100%;
+    width: 100%; */
+  }
 
-  .personalArticles .responsive a {
+  #messages-list .responsive a {
     width: 100%;
     position: relative;
   }
@@ -1502,21 +1478,18 @@ input[type="text"]:focus {
     display: block !important;
   }
 
-  .personalArticles {
+  #messages-list {
     display: flex;
     flex-direction: column;
     width: 80vw;
     left: auto;
   }
-  .personalArticles img {
-    /*align-self: flex-start;*/
-    height: 100%;
-    /* width: 25%; */
-    width: 60vw;
-    /* margin-left: 50px; */
+  #messages-list span {
+    display: flex;
+    /* height: 100%;
+    width: 100%; */
   }
-
-  .personalArticles .responsive a {
+  #messages-list .responsive a {
     width: 100%;
     position: relative;
   }
@@ -1525,7 +1498,7 @@ input[type="text"]:focus {
 /*
 	* > 768px e < 1024px
 */
-@media (min-width: 48em) and (max-width: 64em) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .col-md-1 {
     width: 100% !important;
   }
@@ -1537,18 +1510,18 @@ input[type="text"]:focus {
     display: block !important;
   }
 
-  .personalArticles {
+  #messages-list {
     display: flex;
     flex-direction: column;
     width: 50vw;
     /* left: auto; */
   }
-  .personalArticles img {
-    height: 100%;
-    width: 100%;
+  #messages-list span {
+    display: flex;
+    /* height: 100%;
+    width: 100%; */
   }
-
-  .personalArticles .responsive a {
+  #messages-list .responsive a {
     width: 100%;
     position: relative;
   }
