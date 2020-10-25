@@ -1,5 +1,20 @@
 
-
+// //Logout
+// const logout = document.querySelector(".logout");
+// logout.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   console.log('user logged out');
+//   auth.signOut().then(() => {
+//   //   console.log('user logged out');
+//     window.location.replace("../login.htm");
+//   })
+// })
+// //Handle Account Status
+// firebase.auth().onAuthStateChanged(user => {
+// if(!user) {
+//   window.location.href = '../login.html'; //If User is not logged in, redirect to login page
+// }
+// });
 var saveAddress = window.location.href;
 saveAddress = saveAddress.split("/").reverse();
 var id = saveAddress[0];
@@ -33,8 +48,8 @@ var addComment = document.querySelector(".add-comment");
 addComment.addEventListener("submit", (e) => {
   e.preventDefault();
   db.collection("Comments").add({
-    fname: addComment.first_name.value,
-    lname: addComment.last_name.value,
+    name: addComment.name.value,
+    email:addComment.email.value,
     Comment: addComment.message.value,
     id: id,
     Date: new Date(),
@@ -50,7 +65,10 @@ function renderComments(doc) {
   username.textContent = doc.data().name;
   var usercomment = document.createElement("p");
   usercomment.textContent = doc.data().Comment;
+  var useremail =document.createElement('span')
+  useremail.textContent=doc.data().email
   indivudualcomments.appendChild(username);
+  indivudualcomments.appendChild(useremail)
   indivudualcomments.appendChild(usercomment);
   displaycomment.insertAdjacentElement("afterbegin", indivudualcomments);
 }

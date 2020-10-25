@@ -4,20 +4,17 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body {
-  background: url("../../images/andela.jpg") no-repeat;
+  background: url("../../images/background.jpg") no-repeat;
   background-size: cover;
   background-position: center;
 }
 .topnav {
   overflow: hidden;
-  /* background-color: #333; */
 }
-/* .logo {
-  width: 60px;
-  height: 30px;
-} */
+
 .topnav a {
   float: left;
   display: block;
@@ -163,7 +160,7 @@ img {
   transform: scale(0.99);
 }
 
-footer {
+/* footer {
   background-color: #333333;
   padding: 20px;
   margin-top: 20px;
@@ -222,7 +219,7 @@ footer {
   text-align: center;
   color: white;
   border-top: #595959 solid 1px;
-}
+} */
 
 @media screen and (max-width: 700px) {
   .login,

@@ -6,19 +6,18 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  background-color: rgb(248, 246, 246);
-  font-family: "Poppins", sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.2rem;
   color: black;
 }
 .container {
-  max-width: 1200px;
+  width: 80%;
   margin: 0 auto;
-  padding: 0 40px;
+  /* padding: 0 40px; */
 }
 /* Header and navigation styling */
 
@@ -33,11 +32,13 @@ nav {
   display: flex;
   justify-content: space-around;
   width: 30%;
+  float: right;
 }
 
 .logo a {
   text-decoration: none;
   color: inherit;
+  float: left;
 }
 
 .nav-links li {
@@ -51,28 +52,21 @@ nav {
   font-weight: 600;
   padding: 1.5rem;
 }
-/* 
-#highlight {
-  color: #ff0000;
-  background-color: #ff00001a;
-  border-radius: 10px;
-} */
 
 .nav-links li:hover {
-  /* color: #ff000; */
   background-color: #ff00001a;
   border-radius: 10px;
 }
 
-.burger div {
+.burgerIcon div {
   width: 25px;
   height: 3px;
   margin: 5px;
   background-color: black;
 }
 
-.burger {
-  display: none;
+.burgerIcon {
+  /* display: none; */
   cursor: pointer;
 }
 
