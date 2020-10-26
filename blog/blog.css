@@ -16,38 +16,54 @@ body {
   width: 80%;
   margin: 0 auto;
 }
-.topnav {
-  overflow: hidden;
-  /* background-color: #333; */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
 }
 
-.topnav a {
-  float: left;
-  display: block;
-  color: #000;
-  text-align: center;
-  padding: 14px 16px;
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  float: right;
+}
+
+.logo a {
   text-decoration: none;
-  font-size: 17px;
+  color: inherit;
+  float: left;
 }
 
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+.nav-links li {
+  list-style: none;
+  transition-duration: 0.3s;
 }
 
-.topnav a.active {
-  background-color: #4caf50;
-  color: white;
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+  padding: 1.5rem;
 }
 
-.topnav .icon {
-  display: none;
+.nav-links li:hover {
+  background-color: #ff00001a;
+  border-radius: 10px;
 }
-/* .topnav .logo {
-  width: 60px;
-  height: 30px;
-} */
+
+.burgerIcon div {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: black;
+}
+
+.burgerIcon {
+  /* display: none; */
+  cursor: pointer;
+}
 /* Showcae*/
 .showcase {
   width: 100%;
@@ -177,6 +193,54 @@ span {
   float: left;
   padding: 15px;
 }
+@media only screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding: 0 5px;
+  }
+
+  nav {
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 80vh;
+    top: 8vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+  display: flex;
+}
+
+@keyframes navlink-fade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
 @media only screen and (min-width: 768px) {
   /* For desktop: */
   .col-1 {

@@ -20,40 +20,53 @@ body {
 }
 /*Nav*/
 
-.topnav {
-  overflow: hidden;
-  background-color: #333;
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
 }
-.topnav .logo {
-  width: 60px;
-  height: 30px;
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  float: right;
 }
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
+
+.logo a {
   text-decoration: none;
-  font-size: 17px;
+  color: inherit;
+  float: left;
 }
 
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+.nav-links li {
+  list-style: none;
+  transition-duration: 0.3s;
 }
 
-.topnav a.active {
-  background-color: #4caf50;
-  color: white;
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+  padding: 1.5rem;
 }
 
-.topnav .icon {
-  display: none;
+.nav-links li:hover {
+  background-color: #ff00001a;
+  border-radius: 10px;
 }
-.topnav .logo {
-  width: 60px;
-  height: 30px;
+
+.burgerIcon div {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: black;
+}
+
+.burgerIcon {
+  /* display: none; */
+  cursor: pointer;
 }
 
 input[type="name"],
@@ -111,163 +124,53 @@ button {
   width: 700px;
   height: 300px;
 }
-@mixin lato-book {
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-}
-@mixin lato-reg {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-}
-@mixin lato-bold {
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-}
-@mixin btn(color) {
-  background-color: color;
-  border-bottom-color: darken(color, 15%);
-  :hover {
-    background-color: lighten(color, 5%);
+
+@media only screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding: 0 5px;
+  }
+
+  nav {
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 80vh;
+    top: 8vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    display: none;
+  }
+
+  .burger {
+    display: block;
   }
 }
-/* 
-//Functions
 
-@function pxtoem(target, context) {
-  @return (target/context)+0em;
-}
-
-// */
-
-body {
-  background-color: lighten(grey, 10%);
-  font-size: 100%;
-  @include lato-reg;
-}
-div,
-textarea,
-input {
-  @include box-sizing(border-box);
-}
-.container {
-  max-width: 510px;
-  min-width: 324px;
-  margin: 50px auto 0px;
-  background-color: white;
-  border: 1px solid lighten(grey, 1%);
-  border-bottom: 3px solid grey;
-}
-.row {
-  width: 100%;
-  margin: 0 0 1em 0;
-  padding: 0 2.5em;
-}
-.header {
-  padding: 1.5em 2.5em;
-  border-bottom: 1px solid grey;
-  background: url(https://images2.imgbox.com/a5/2e/m3lRbCCA_o.jpg) left -80px;
-  color: white;
-}
-.body {
-  padding: 0.5em 2.5em 1em;
+.nav-active {
+  transform: translateX(0%);
+  display: flex;
 }
 
-.pull-right {
-  float: right;
-}
-h1 {
-  @include lato-book;
-  display: inline-block;
-  font-weight: 100;
-  font-size: pxtoem(45, 16);
-  border-bottom: 1px solid hsla(100%, 100%, 100%, 0.3);
-  margin: 0 0 0.1em 0;
-  padding: 0 0 0.4em 0;
-  text-align: center;
-}
-h3 {
-  @include lato-reg;
-  font-size: pxtoem(20, 16);
-  margin: 1em 0 0.4em 0;
-}
-.btn {
-  font-size: pxtoem(17, 16);
-  display: inline-block;
-  padding: 0.74em 1.5em;
-  margin: 1.5em 0 0;
-  color: white;
-  border-width: 0 0 0 0;
-  border-bottom: 5px solid;
-  text-transform: uppercase;
-  @include btn(darken(grey, 10%));
-  @include lato-book;
-}
-.btn-submit {
-  @include btn(blue);
-}
-
-form {
-  max-width: 100%;
-  display: block;
-}
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-li {
-  margin: 0 0 0.25em 0;
-  clear: both;
-  display: inline-block;
-  width: 100%;
-}
-:last-child {
-  margin: 0;
-}
-p {
-  margin: 0;
-  padding: 0;
-  float: left;
-}
-.right {
-  float: right;
-}
-
-.divider {
-  margin: 0.5em 0 0.5em 0;
-  border: 0;
-  height: 1px;
-  width: 100%;
-  display: block;
-  background-color: blue;
-  background-image: linear-gradient(to right, pink, blue);
-}
-.req {
-  color: pink;
-}
-
-label {
-  display: block;
-  margin: 0 0 0.5em 0;
-  color: blue;
-  font-size: pxtoem(16, 16);
-}
-input {
-  margin: 0 0 0.5em 0;
-  border: 1px solid grey;
-  padding: 6px 10px;
-  color: dark_grey;
-  font-size: pxtoem(16, 16);
-}
-textarea {
-  border: 1px solid grey;
-  padding: 6px 10px;
-  width: 100%;
-  color: dark_grey;
-}
-small {
-  color: blue;
-  margin: 0 0 0 0.5em;
+@keyframes navlink-fade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -280,7 +183,7 @@ small {
   label {
     width: 100%;
     display: inline-block;
-    float: left;
+    /* float: left; */
     clear: both;
   }
   li,
