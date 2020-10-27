@@ -57,7 +57,7 @@ nav {
 }
 
 .burgerIcon {
-  /* display: none; */
+  display: none;
   cursor: pointer;
 }
 
@@ -485,7 +485,7 @@ footer {
     display: none;
   }
 
-  .burger {
+  .burgerIcon {
     display: block;
   }
 }

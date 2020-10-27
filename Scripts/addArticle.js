@@ -1,21 +1,20 @@
-
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
-var db = firebase.firestore();
-var ref = firebase.storage().ref();
-var imageLink;
+// firebase.analytics();
+const db = firebase.firestore();
+const ref = firebase.storage().ref();
+let imageLink;
 
 //upload an image
-var articleImage = document.querySelector("#article-image");
+const articleImage = document.querySelector("#article-image");
 articleImage.addEventListener("change", () => {
-  var file = articleImage.files[0];
+  const file = articleImage.files[0];
   const name = file.name;
 
   const metadata = {
     contentType: file.type,
   };
-  var upload = ref.child(name).put(file, metadata);
+  const upload = ref.child(name).put(file, metadata);
   upload
     .then((snapshot) => snapshot.ref.getDownloadURL())
     .then((url) => {
@@ -23,7 +22,7 @@ articleImage.addEventListener("change", () => {
     });
 });
 
-var newArticle = document.querySelector(".new-article");
+const newArticle = document.querySelector(".new-article");
 newArticle.addEventListener("submit", (e) => {
   e.preventDefault();
   db.collection("Articles").add({

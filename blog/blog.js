@@ -1,5 +1,13 @@
 
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  // firebase.analytics();
+  const auth = firebase.auth()
+  var db = firebase.firestore()
+
 var Articles = document.querySelector('.articles')
+
+
 function renderArticles(doc){
     var img = document.createElement('img')
     img.setAttribute('src',doc.data().Image)

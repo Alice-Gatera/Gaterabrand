@@ -14,9 +14,9 @@ body {
 }
 
 .container {
-  width: 90%;
-  max-width: 1100px;
-  margin: auto;
+  width: 80%;
+
+  margin: 0 auto;
 }
 /*Nav*/
 
@@ -65,7 +65,7 @@ nav {
 }
 
 .burgerIcon {
-  /* display: none; */
+  display: none;
   cursor: pointer;
 }
 
@@ -78,7 +78,17 @@ textarea {
   border: none;
   border-bottom: 1px solid gray;
   color: black;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+input[type="email"] {
+  width: 300px;
+  margin: 15px;
+  padding: 18px;
+  background: #fff;
+  border: none;
+  border-bottom: 1px solid gray;
+  color: black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 input {
@@ -152,7 +162,7 @@ button {
     display: none;
   }
 
-  .burger {
+  .burgerIcon {
     display: block;
   }
 }

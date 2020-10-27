@@ -3,25 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" /> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="../Css/bootstrap.css">  
     <link rel="stylesheet" href="../Css/Css/addarticle.css">
+    <link rel="stylesheet" href="../Css/Css/sharedMenu.css">
     
     <title>Add article</title>
 </head>
 <body>
+
+    <div class="container">
+        <nav>
+        <div class="logo">
+          <h3>Alice gatera</h3>
+      </div>
+     
+      <ul class="nav-links">
+        <a href="/index.html">Home</a>
+        <a href="../blog/blog.html">Blogs</a>
+        <a href="../Htmls/contact.html"> Contact </a>
+        <a href="./login.html">Login</a>
+      </ul>
+      <div class="burgerIcon">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+      </div>
+    </nav>
     <section class="addArticle-section">
 
     <div class="add-article">
         <h2>New article</h2>
         <form class="new-article">
+            <div class="infos">
             <input type="file" name="file" id="article-image"  accept="image/png, image/jpeg" required> 
+        </div>
             <input type="text" name="title" class="text-box" placeholder=" The article's  title" required>
             <textarea name="article"  rows="5" placeholder="Your article" required></textarea>
             <input type="submit" name="submit" class="send-btn" value="Add article" required>
         </form>
 </div>
     </section>
+    </div>
 <div class="display-newArticle">
 </div>
 
@@ -32,6 +55,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-storage.js"></script>
     <script src="../Scripts/config.js"></script>
     <script src ="../Scripts/addArticle.js"></script>
+    <!-- <script src="../Scripts/logout.js"></script> -->
     
 </body>
 </html>

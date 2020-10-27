@@ -1,5 +1,10 @@
 
-
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  // firebase.analytics();
+  const auth = firebase.auth()
+  var db = firebase.firestore()
+  
 var comment = document.querySelector('.commentDisplay')
 function renderComment(doc){
   const commentBlock = document.createElement('div')

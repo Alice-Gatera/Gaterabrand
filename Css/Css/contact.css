@@ -10,11 +10,11 @@ body {
   background: rgb(148, 105, 105);
   color: #000;
 }
-.container {
+ .container {
   width: 80%;
   margin: 0 auto;
 }
-nav {
+/* nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -60,8 +60,8 @@ nav {
 
 .burgerIcon {
   /* display: none; */
-  cursor: pointer;
-}
+  /* cursor: pointer;
+}  */
 /* Showcae*/
 .showcase {
   width: 100%;

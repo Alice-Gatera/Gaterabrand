@@ -1,3 +1,10 @@
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  // firebase.analytics();
+  const auth = firebase.auth()
+  var db = firebase.firestore()
+
 const form = document.querySelector(".contact");
 // saving data
 form.addEventListener("submit", (e) => {

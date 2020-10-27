@@ -1,4 +1,10 @@
 
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  // firebase.analytics();
+  const auth = firebase.auth()
+  var db = firebase.firestore()
+
 var messageList = document.querySelector("#messages-list");
 
 // create element and render message
