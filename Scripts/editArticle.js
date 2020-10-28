@@ -1,13 +1,4 @@
-var firebaseConfig = {
-  apiKey: "AIzaSyB0JOybrzzCstQQhPhA0hyB8vTHa4lYxu4",
-  authDomain: "gaterabrand.firebaseapp.com",
-  databaseURL: "https://gaterabrand.firebaseio.com",
-  projectId: "gaterabrand",
-  storageBucket: "gaterabrand.appspot.com",
-  messagingSenderId: "847513202370",
-  appId: "1:847513202370:web:36e3c63b0ce5998fe3d55b",
-  measurementId: "G-EPTP28G5XM",
-};
+
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
@@ -36,45 +27,32 @@ var query = window.location.search.substring(1);
 var vars = query.split("=");
 var blogId = vars[1];
 console.log("Blog id", blogId);
-var editArticle = document.querySelector(".article");
-var deleteArticle = document.querySelector(".article");
+var editForm = document.querySelector(".article");
+var deleteForm = document.querySelector(".article");
 db.collection("Articles")
   .doc(blogId)
   .get()
   .then((res) => {
     console.log("Blog data for id", blogId, res.data());
     var blog = res.data();
-    editArticle.title.value = blog.Title;
-    editArticle.article.value = blog.Content ("\n\n");
-    editArticle.submit.value = `Edit`;
-    deleteArticle.submit.value = `Delete`;
+    editForm.title.value = blog.Title;
+    editForm.article.value = blog.Content;
+    // editArticle.submit.value = `Edit`;
+    // deleteArticle.submit.value = `Delete`;
   });
-editArticle.addEventListener("submit", (e) => {
+editForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  console.log("Clicked", editArticle.title.value, editArticle.article.value);
   db.collection("Articles")
     .doc(blogId)
     .update({
-      Title: editArticle.title.value,
-      Content: editArticle.article.value,
+      Title: editForm.title.value,
+      Content: editForm.article.value,
     })
     .then(() => {
-      editArticle.reset();
+     editForm.reset();
       window.location.href = "./Admin/articleDashboard.html";
-    });
-  editArticle
-    .addEventListener("submit", (e) => {
-      e.preventDefault();
-      console.log(
-        "Clicked",
-        editArticle.title.value,
-        editArticle.article.value
-      );
-      db.collection("Articles").doc(id).delete();
-    })
-    .then(() => {
-      editArticle.reset();
-      window.location.href = "./Admin/articleDashboard.html";
+    }).catch((error)=>{
+      console.log('============>',error);
     });
 });
 

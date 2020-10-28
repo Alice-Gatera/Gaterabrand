@@ -25,6 +25,7 @@ function renderArticles(doc){
     var year = timeStamp.getFullYear()
    var date = timeStamp.toLocaleString('en-GB', {day:"2-digit"});
    var result = `${date}-${month}-${year}`
+   
     spanDate.textContent = result;
     div.appendChild(img);
     div.appendChild(container)
